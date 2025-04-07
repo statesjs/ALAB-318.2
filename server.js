@@ -16,7 +16,7 @@ const mainRouter = require("./routes/mainPages");
 //implement routes with prefixed url
 app.use("/user", userRouter);
 app.use("/", mainRouter);
-//making all ims in imgs folder static
-app.use(express.static("imgs"));
+//making all files in public folder static
+app.use(express.static("public"));
 
 app.listen(3000);
