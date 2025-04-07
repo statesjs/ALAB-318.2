@@ -24,9 +24,9 @@ router.post("/signup", (req, res) => {
   res.send(`Sign up Successful 🎉 "${req.body.username}"`);
 });
 
-//dynamic user page
+//dynamic user page ex: http://localhost:3000/user/jesse
 router.get("/:username", (req, res) => {
-  res.render("../views/user", { username: req.params.username });
+  res.render("mypage", { username: req.params.username });
 });
 
 module.exports = router;
