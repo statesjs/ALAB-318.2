@@ -10,7 +10,35 @@
     <link rel="stylesheet" href="" />
   </head>
   <body>
-    <h1>This is the index</h1>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Me</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/login">Login/SignUp</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Hello, I'm <%= name %> 👋</h1>
+        <p>Welcome to my software engineering portfolio.</p>
+        <p>
+          I'm focused on building scalable full-stack applications with modern
+          JavaScript tooling.
+        </p>
+      </section>
+
+      <section class="cta">
+        <a href="/projects"><button>View My Projects</button></a>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <%= new Date().getFullYear() %> <%= name %>.</p>
+    </footer>
 
     <script src="" async defer></script>
   </body>
