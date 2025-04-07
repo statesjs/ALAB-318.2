@@ -1,24 +1,27 @@
 const express = require("express");
 const router = express.Router();
 
-//login
+//login view route
 router.get("/", (req, res, next) => {
   res.render("../views/login");
 });
+//
 
-//signup
+//login post req
+router.post("/", (req, res) => {
+  console.log("Login submitted:", req.body);
+  res.send("sign up complete");
+});
+
+//signup view route
 router.get("/signup", (req, res) => {
   res.render("../views/signup");
 });
 
-//post request
-router.post("/", (req, res) => {
-  res.send("create user");
-});
-
-router.get("/:id", (req, res) => {
-  req.params.id;
-  res.send;
+//signup post request
+router.post("/signup", (req, res) => {
+  console.log("Signup submitted:", req.body);
+  res.send(`sign up complete ${req.body}`);
 });
 
 module.exports = router;
