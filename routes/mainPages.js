@@ -17,7 +17,7 @@ router.get("/projects", (req, res) => {
 //download path
 router.get("/download", (req, res) => {
   const filePath = path.join(__dirname, "../imgs/madhammy.jpg");
-  res.download(filePath, "devlink-download.jpg", (err) => {
+  res.download(filePath, "hamsterismad.jpg", (err) => {
     if (err) {
       console.error("Download error:", err);
       res.status(500).send("File failed to download.");
