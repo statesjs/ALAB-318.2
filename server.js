@@ -3,13 +3,14 @@ const app = express();
 
 //set view engine to ejs
 app.set("view engine", "ejs");
+//middleware for form
+app.use(express.urlencoded({ extended: true }));
 
+//routers imported
 const userRouter = require("./routes/users");
 const mainRouter = require("./routes/mainPages");
 
-app.use("/login", userRouter);
+app.use("/user", userRouter);
 app.use("/", mainRouter);
-//middleware for form
-app.use(express.urlencoded({ extended: true }));
 
 app.listen(3000);
